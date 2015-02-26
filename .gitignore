@@ -41,3 +41,7 @@
 *.manifest
 *.filters
 *.vcxproj
+*.ipch
+*.lastbuildstate
+*.ilk
+*.unsuccessfulbuild
