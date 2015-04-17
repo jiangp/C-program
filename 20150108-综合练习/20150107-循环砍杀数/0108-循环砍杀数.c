@@ -4,52 +4,45 @@
 #include<time.h>
 #define MAX 100
 #define STEP  5
-//void func1()
-//{
-//	func1();
-//}
+
 void ysf1()
 {
 	int LEFT[MAX];
-	int index,LEFT1=MAX;
-	int start_index=0;
+	int index, LEFT1 = MAX;
+	int start_index = 0;
 	int move_index;
-	for(index=0;index!=MAX;index++)
+	for(index = 0; index != MAX; index++)
 	{
-		LEFT[index]=index+1;
+		LEFT[index] = index + 1;
 	}
-	while(LEFT1!=1)
+	while(LEFT1 != 1)
 	{
-		index=1;
-		while(index!=STEP)
-		  {
-			
-			if((start_index+1)==LEFT1)
-		     {
-			   start_index=0;
+		index = 1;
+		while(index != STEP)
+		{	
+			if((start_index + 1) == LEFT1)
+		    {
+			   start_index = 0;
 		     }
 			else
 			{
 				start_index++;
-			 }
+			}
 			index++;
 	     }
-		printf("%d\n",LEFT[start_index]);	
-		//move_index+=start_index;
-	    for(move_index=start_index+1;move_index!=LEFT1;move_index++)
+		printf("%d\n", LEFT[start_index]);	
+		
+	    for(move_index = start_index+1; move_index != LEFT1; move_index++)
 	      {
-		     LEFT[move_index-1]=LEFT[move_index];
+		     LEFT[move_index-1] = LEFT[move_index];
 	      }
-		if(start_index==LEFT1-1)
+		if(start_index == LEFT1 - 1)
 		{
 			start_index = 0 ;
 		}
-	   
-	   // for(index=0;index<LEFT1;index++)
-
-		LEFT1--;
+	   LEFT1--;
 	}
-	printf("%d\n",LEFT[0]);
+	printf("%d\n", LEFT[0]);
 	
 }
 void ysf2()
@@ -73,7 +66,6 @@ void ysf2()
 			
 			if(index == STEP)
 			{
-				//printf("2: out: %d \n", arr[start_index]);
 				arr[start_index] = 0 ;
 				index = 0 ;
 				left -- ;
@@ -94,8 +86,8 @@ void ysf2()
 	}
 }
 int main()
-      {
-		  ysf1();
+{
+	 ysf1();
 	/*
 	clock_t bg1, bg2, end1, end2 ;
 	bg1 = clock();
@@ -108,6 +100,6 @@ int main()
 	end2 = clock();
 	printf("2: %.16fS\n", (double)(end2 - bg2)/CLOCKS_PER_SEC );
 	system("pause");*/
-		  system("pause");
-          return 0;
-      }
+	system("pause");
+    return 0;
+}

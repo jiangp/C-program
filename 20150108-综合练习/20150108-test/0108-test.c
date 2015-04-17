@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
-#define MAX 10
+#define MAX 100
 #define STEP  5
 int main()
 {
@@ -10,8 +10,8 @@ int main()
 	int index,left=MAX,i=1;
 	int start_index=0;
 	int move_index;
-	for(index=0;index<100;index++)//数组付初中1~100
-		all[index]=index+1;
+	for(index=0;index<MAX;index++)//数组付初中1~100
+		all[index] = index + 1;
 	while(i<MAX)//杀99次
 	{
 		if(all[start_index]!=0)//判断是否为0
@@ -27,8 +27,8 @@ int main()
 				index++;
                
 			}
-			printf("%d\n",all[i]);	
-			all[start_index]=0;                   
+			printf("%d\n", all[i]);	
+			all[start_index] = 0;                   
 		}
 		else
 		{
